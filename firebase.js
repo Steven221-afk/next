@@ -7,13 +7,13 @@ import { getAuth , createUserWithEmailAndPassword ,signInWithEmailAndPassword , 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAsz1oCCnC6cfGuz-BgypNU5vfGyhNmORw",
-  authDomain: "tmx-27db6.firebaseapp.com",
-  projectId: "tmx-27db6",
-  storageBucket: "tmx-27db6.firebasestorage.app",
-  messagingSenderId: "1039087524135",
-  appId: "1:1039087524135:web:91792eb81974c186c43102",
-  measurementId: "G-88W0C2WRJB"
+  apiKey: "AIzaSyBLqQhAtNuO632Xd3-e5Fe3oYDKLJGT8K0",
+  authDomain: "gay-ass-nigga.firebaseapp.com",
+  databaseURL: "https://gay-ass-nigga-default-rtdb.firebaseio.com",
+  projectId: "gay-ass-nigga",
+  storageBucket: "gay-ass-nigga.firebasestorage.app",
+  messagingSenderId: "740449529935",
+  appId: "1:740449529935:web:ab2538ff3bdad3fbc8fa3a"
 };
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
