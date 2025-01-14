@@ -1,56 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Sing up sing in form in firebase</title>
-   <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account Recovery</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #F0F4F9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    .box {
+      background-color: #FFFFFF;
+      padding: 30px;
+      width: 100%;
+      max-width: 800px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-group-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .form-group {
+      position: relative;
+      width: 50%;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .form-group input:focus {
+      border-color: #2d08a8;
+    }
+
+    .form-group label {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 16px;
+      color: #aaa;
+      background-color: #fff;
+      padding: 0 5px;
+      pointer-events: none;
+      transition: all 0.3s;
+    }
+
+    .form-group input:focus ~ label,
+    .form-group input:not(:placeholder-shown) ~ label {
+      top: -10px;
+      font-size: 12px;
+      color: #2d08a8;
+    }
+
+    .account-recovery-text {
+      width: 45%;
+      text-align: left;
+    }
+
+    .account-recovery-text h1 {
+      font-size: 24px;
+      margin: 0;
+      color: #222;
+    }
+
+    .account-recovery-text p {
+      font-size: 14px;
+      color: #555;
+      margin: 5px 0 0;
+    }
+
+    .login-btn {
+      width: 100px;
+      padding: 10px;
+      border: none;
+      background-color: rgb(27, 83, 196);
+      color: white;
+      font-size: 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      align-self: flex-start;
+    }
+
+    .login-btn:hover {
+      background-color: #3700b3;
+    }
+  </style>
 </head>
 <body>
-   <div class="sing-un-form">
-      <form id="sing_up_form" class="form">
-         <h2>Sign Up</h2>
-         <div class="Sname">
-            <label for="name">Name</label><br>
-            <input type="text" id="Sname" required>
-         </div>
-         <div class="Sname">
-            <label for="email">Email</label><br>
-            <input type="email" id="Semail" required>
-         </div>
-         <div class="Sname">
-            <label for="password">Password</label><br>
-            <input type="password" id="Spassward" required>
-         </div>
-         <center>  
-         <button type="submit" id="sing-btn">Sign Up</button> <br>
-         <a href="#" id="create-account1" class="create-account">Already have an account?</a>
-         </center>   
-      </form>
-      <form id="sing_in_form" class="form">
-         <h2>Sign In</h2>
-         <div class="Sname">
-            <label for="email">Email</label><br>
-            <input type="email" id="Iemail" required>
-         </div>
-         <div class="Sname">
-            <label for="password">Password</label><br>
-            <input type="password" id="Ipassward" required>
-         </div>
-         <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;" class="div">
-         <button type="submit" id="singin-btn">Sign In</button><br>
-         <button id="dashboard" style="margin-top: 10px;" class="btn btn-outline-success fs-5">Sing out</button><br>
-         </div>
-         <center>
-         <a href="#" id="create-account2" class="create-account">Create a new account</a>
-         </center>
-         
-      </form>
-   </div>
-   <!-- Sweet alert cdn -->
-   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   <!-- firebase app file -->
-   <!-- App.ja file -->
-   <script type="module" src="app.js"></script>
+  <div class="box">
+    <form>
+      <div class="form-group-container">
+        <!-- Email Input Field -->
+        <div class="form-group">
+          <input type="email" id="email" required placeholder=" ">
+          <label for="email">Email</label>
+        </div>
+
+        <!-- Account Recovery Text -->
+        <div class="account-recovery-text">
+          <h1>Account Recovery</h1>
+          <p>Recover your account by entering your email address.</p>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="login-btn">Next</button>
+    </form>
+  </div>
 </body>
 </html>
